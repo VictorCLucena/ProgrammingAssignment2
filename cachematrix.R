@@ -1,7 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## The function receaves a matrix as parameter and cache it
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -23,6 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   m <- x$getInverse()
+  
+  ## if there is no change in the matrix, then the cached data is returned
   if(!is.null(m)) {
     message("Getting cached matrix")
     return(m)
